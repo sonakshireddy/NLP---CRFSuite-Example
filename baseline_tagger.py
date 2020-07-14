@@ -82,18 +82,18 @@ if __name__ == '__main__':
     # input_path = 'train/'
     test_dir = 'dev/'
     output_file = 'op.txt'
-    # data = get_data(input_path)
-    # X_features = []
-    # Y_features = []
-    # count = 0
-    # for dialog in data:
-    #     x, y = create_features(dialog)
-    #     count += len(x)
-    #     X_features.append(x)
-    #     if y:
-    #         Y_features.append(y)
-    # trainer = create_trainer(X_features, Y_features)
-    # trainer.train('base.crfsuite')
+    data = get_data(input_path)
+    X_features = []
+    Y_features = []
+    count = 0
+    for dialog in data:
+        x, y = create_features(dialog)
+        count += len(x)
+        X_features.append(x)
+        if y:
+            Y_features.append(y)
+    trainer = create_trainer(X_features, Y_features)
+    trainer.train('base.crfsuite')
     test = get_data(test_dir)
     evaulate_base_tagger(test,output_file)
 
