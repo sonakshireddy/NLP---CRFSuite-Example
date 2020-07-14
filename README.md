@@ -1,2 +1,2 @@
-# NLP---CRFSuite-Example
+# NLP-CRFSuite-Example
 USC - NLP Assignment on sequence labelling
